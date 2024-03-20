@@ -12,6 +12,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,13 +27,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
-@AllArgsConstructor
+//@AllArgsConstructor
 @Validated
 
 public class AccountsController {
 	
 	@Autowired
 	private IAccountsService iAccountsService;
+	
+	public AccountsController(IAccountsService iAccountsService) {
+		this.iAccountsService = iAccountsService;
+	}
+
+	@Value("${build.version}")
+	private String buildVersion;
+	
+	@GetMapping("/build-info")
+	public ResponseEntity<String> getBuildInfo() {
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(buildVersion);
+	}
 	
 	@PostMapping("/account")
 	public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody CustomerDto customerDto) {

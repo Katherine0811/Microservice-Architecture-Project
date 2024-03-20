@@ -1,18 +1,17 @@
 package com.tus.accounts.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor
+@Data
 public class ResponseDto {
-	
-	private String statusCode;
-	private String statusMessage;
-	
-	public ResponseDto(String statusCode, String statusMessage) {
+    
+    private String statusCode;
+    private String statusMsg;
+    
+	public ResponseDto(String statusCode, String statusMsg) {
 		super();
-		this.setStatusCode(statusCode);
-		this.setStatusMessage(statusMessage);
+		this.statusCode = statusCode;
+		this.statusMsg = statusMsg;
 	}
 
 	public String getStatusCode() {
@@ -23,11 +22,12 @@ public class ResponseDto {
 		this.statusCode = statusCode;
 	}
 
-	public String getStatusMessage() {
-		return statusMessage;
+	public String getStatusMsg() {
+		return statusMsg;
 	}
 
-	public void setStatusMessage(String statusMessage) {
-		this.statusMessage = statusMessage;
+	public void setStatusMsg(String statusMsg) {
+		this.statusMsg = statusMsg;
 	}
+    
 }
