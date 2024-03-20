@@ -1,0 +1,16 @@
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\controller\CardsController.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\constants\CardsConstants.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\CardsApplication.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\exception\ResourceNotFoundException.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\dto\ResponseDto.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\service\ICardsService.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\service\impl\CardsServiceImpl.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\dto\CardsDto.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\exception\CardAlreadyExistsException.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\audit\AuditAwareImpl.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\exception\GlobalExceptionHandler.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\entity\BaseEntity.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\dto\ErrorResponseDto.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\entity\Cards.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\mapper\CardsMapper.java
+C:\Users\kathe\git\Microservice-Architecture-Project\cards\src\main\java\com\tus\cards\repository\CardsRepository.java
