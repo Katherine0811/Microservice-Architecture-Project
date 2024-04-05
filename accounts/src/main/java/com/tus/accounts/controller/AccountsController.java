@@ -3,6 +3,7 @@ package com.tus.accounts.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tus.accounts.constants.AccountsConstants;
+import com.tus.accounts.dto.AccountsContactInfoDto;
 import com.tus.accounts.dto.CustomerDto;
 import com.tus.accounts.dto.ResponseDto;
 import com.tus.accounts.service.IAccountsService;
@@ -13,6 +14,7 @@ import lombok.AllArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -42,11 +44,31 @@ public class AccountsController {
 	@Value("${build.version}")
 	private String buildVersion;
 	
+	@Autowired
+	private Environment environment;
+	
+	@Autowired
+	private AccountsContactInfoDto accountsContactInfoDto;
+		
 	@GetMapping("/build-info")
 	public ResponseEntity<String> getBuildInfo() {
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(buildVersion);
+	}
+	
+	@GetMapping("/java-version")
+	public ResponseEntity<String> getJavaVersion() {
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(environment.getProperty("JAVA_HOME"));
+	}
+	
+	@GetMapping("/contact-info")
+	public ResponseEntity<AccountsContactInfoDto> getContactInfo() {
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(accountsContactInfoDto);
 	}
 	
 	@PostMapping("/account")
