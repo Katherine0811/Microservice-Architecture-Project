@@ -42,15 +42,15 @@ class AccountsServiceImplTests {
     private Accounts accounts;
     private Customer customer;
     // Constant Variables - AccountsDTO
-    final static long ACCOUNT_NUMBER = 1234567890;
-    final static String ACCOUNT_TYPE = "Savings";
-    final static String BRANCH_ADDRESS = "123 Main Street, New York";
+    static final long ACCOUNT_NUMBER = 1234567890;
+    static final String ACCOUNT_TYPE = "Savings";
+    static final String BRANCH_ADDRESS = "123 Main Street, New York";
     // Constant Variables - CustomerDTO
-    final static long CUSTOMER_ID = 1234567890;
-    final static String NAME = "Katherine";
-    final static String NAME2 = "Yan Jie";
-    final static String EMAIL = "kathy.lee0356@gmail.com";
-    final static String MOBILE_NUMBER = "0894949352";
+    static final long CUSTOMER_ID = 1234567890;
+    static final String NAME = "Katherine";
+    static final String NAME2 = "Yan Jie";
+    static final String EMAIL = "kathy.lee0356@gmail.com";
+    static final String MOBILE_NUMBER = "0894949352";
 
     @BeforeEach
     public void setUp() {
@@ -142,9 +142,7 @@ class AccountsServiceImplTests {
         // Setup
     	when(customerRepository.findByMobileNumber(MOBILE_NUMBER)).thenReturn(Optional.of(customer));
         // Execute
-    	Throwable exception = assertThrows(CustomerAlreadyExistsException.class, () -> {
-            accountsService.createAccount(customerDto);
-        });
+    	Throwable exception = assertThrows(CustomerAlreadyExistsException.class, () -> accountsService.createAccount(customerDto));
         // Verify
     	assertEquals("Customer already registered with given mobile number " + MOBILE_NUMBER, exception.getMessage());
     	verify(customerRepository, times(0)).save(any());
