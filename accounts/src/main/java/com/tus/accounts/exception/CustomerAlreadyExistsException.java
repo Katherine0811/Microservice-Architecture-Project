@@ -1,4 +1,4 @@
-package com.tus.accounts.execption;
+package com.tus.accounts.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

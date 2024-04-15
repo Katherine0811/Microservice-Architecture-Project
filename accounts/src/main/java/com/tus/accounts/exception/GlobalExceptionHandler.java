@@ -1,4 +1,4 @@
-package com.tus.accounts.execption;
+package com.tus.accounts.exception;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
