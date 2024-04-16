@@ -9,5 +9,3 @@ COPY target/*.jar /app/app.jar
 
 # Specify the command to run on container start
 CMD ["java", "-jar", "app.jar"]
-
-# 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
