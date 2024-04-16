@@ -4,8 +4,8 @@ FROM openjdk:17-jdk
 # Set the working directory
 WORKDIR /app
 
-# Copy the executable JAR file to the container
-COPY target/*.jar /app/app.jar
+# Copy the WAR file to the container
+COPY target/*.war /app/app.war
 
 # Specify the command to run on container start
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.war"]
