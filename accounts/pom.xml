@@ -108,7 +108,6 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>com.tus.accounts</mainClass>
 						</manifest>
 					</archive>
