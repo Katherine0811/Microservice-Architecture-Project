@@ -9,3 +9,5 @@ COPY target/*.war /app/app.war
 
 # Specify the command to run on container start
 CMD ["java", "-jar", "app.war"]
+
+# Test for GitHub
