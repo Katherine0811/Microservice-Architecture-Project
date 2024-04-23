@@ -1,0 +1,10 @@
+build:
+  version: "3.0"
+accounts:
+  message: "Welcome to accounts related local APIs"
+  contactDetails:
+    name: "Katherine - Developer"
+    email: "katherine.lee0356@gmail.com"
+  onCallSupport:
+    - (086) 555-1234
+    - (087) 523-1345
