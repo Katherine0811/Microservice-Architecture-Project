@@ -8,6 +8,8 @@ import com.tus.loans.mapper.LoansMapper;
 import com.tus.loans.repository.LoansRepository;
 import com.tus.loans.service.ILoansService;
 import lombok.AllArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.Random;
@@ -16,6 +18,8 @@ import java.util.Random;
 @Service
 @AllArgsConstructor
 public class LoansServiceImpl implements ILoansService{
+	
+	@Autowired
 	 private LoansRepository loansRepository;
 	 @Override
 	    public void createLoan(String mobileNumber) {
