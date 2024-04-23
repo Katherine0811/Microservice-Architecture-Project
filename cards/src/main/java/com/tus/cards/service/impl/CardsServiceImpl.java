@@ -8,6 +8,8 @@ import com.tus.cards.mapper.CardsMapper;
 import com.tus.cards.repository.CardsRepository;
 import com.tus.cards.service.ICardsService;
 import lombok.AllArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -17,6 +19,7 @@ import java.util.Random;
 @AllArgsConstructor
 public class CardsServiceImpl implements ICardsService {
 
+	@Autowired
     private CardsRepository cardsRepository;
 
     /**
