@@ -1,7 +1,7 @@
 build:
   version: "1.0"
 loans:
-  message: "Welcome to loans related prod APIs "
+  message: "Welcome to updated loans related prod APIs "
   contactDetails:
     name: "John Bloggs - Prod Support"
     email: "john@tus.ie"
